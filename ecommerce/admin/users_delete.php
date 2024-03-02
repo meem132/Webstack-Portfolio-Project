@@ -1,27 +1,36 @@
 <?php
-	include 'includes/session.php';
+include 'includes/session.php';
 
-	if(isset($_POST['delete'])){
-		$id = $_POST['id'];
-		
-		$conn = $pdo->open();
+// Check if the 'delete' button has been submitted
+if(isset($_POST['delete'])){
+    // Retrieve the ID of the user to be deleted
+    $id = $_POST['id'];
+    
+    // Establish database connection
+    $conn = $pdo->open();
 
-		try{
-			$stmt = $conn->prepare("DELETE FROM users WHERE id=:id");
-			$stmt->execute(['id'=>$id]);
+    try{
+        // Execute SQL query to delete the user
+        $stmt = $conn->prepare("DELETE FROM users WHERE id=:id");
+        $stmt->execute(['id'=>$id]);
 
-			$_SESSION['success'] = 'User deleted successfully';
-		}
-		catch(PDOException $e){
-			$_SESSION['error'] = $e->getMessage();
-		}
+        // Provide success message upon successful deletion
+        $_SESSION['success'] = 'User deleted successfully';
+    }
+    catch(PDOException $e){
+        // Provide error message if an exception occurs
+        $_SESSION['error'] = $e->getMessage();
+    }
 
-		$pdo->close();
-	}
-	else{
-		$_SESSION['error'] = 'Select user to delete first';
-	}
+    // Close database connection
+    $pdo->close();
+}
+else{
+    // Provide error message if the 'delete' button was not clicked
+    $_SESSION['error'] = 'Select user to delete first';
+}
 
-	header('location: users.php');
-	
+// Redirect back to the users page
+header('location: users.php');
+
 ?>
