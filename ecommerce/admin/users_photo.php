@@ -1,30 +1,42 @@
 <?php
-	include 'includes/session.php';
+include 'includes/session.php';
 
-	if(isset($_POST['upload'])){
-		$id = $_POST['id'];
-		$filename = $_FILES['photo']['name'];
-		if(!empty($filename)){
-			move_uploaded_file($_FILES['photo']['tmp_name'], '../images/'.$filename);	
-		}
-		
-		$conn = $pdo->open();
+// Check if the 'upload' button has been submitted
+if(isset($_POST['upload'])){
+    // Retrieve form data
+    $id = $_POST['id'];
+    $filename = $_FILES['photo']['name'];
 
-		try{
-			$stmt = $conn->prepare("UPDATE users SET photo=:photo WHERE id=:id");
-			$stmt->execute(['photo'=>$filename, 'id'=>$id]);
-			$_SESSION['success'] = 'User photo updated successfully';
-		}
-		catch(PDOException $e){
-			$_SESSION['error'] = $e->getMessage();
-		}
+    // Check if a file has been uploaded
+    if(!empty($filename)){
+        // Move the uploaded file to the desired location
+        move_uploaded_file($_FILES['photo']['tmp_name'], '../images/'.$filename);    
+    }
+    
+    // Establish database connection
+    $conn = $pdo->open();
 
-		$pdo->close();
+    try{
+        // Execute SQL query to update user photo
+        $stmt = $conn->prepare("UPDATE users SET photo=:photo WHERE id=:id");
+        $stmt->execute(['photo'=>$filename, 'id'=>$id]);
+        
+        // Provide success message upon successful photo update
+        $_SESSION['success'] = 'User photo updated successfully';
+    }
+    catch(PDOException $e){
+        // Provide error message if an exception occurs
+        $_SESSION['error'] = $e->getMessage();
+    }
 
-	}
-	else{
-		$_SESSION['error'] = 'Select user to update photo first';
-	}
+    // Close database connection
+    $pdo->close();
+}
+else{
+    // Provide error message if the 'upload' button was not clicked
+    $_SESSION['error'] = 'Select user to update photo first';
+}
 
-	header('location: users.php');
+// Redirect back to the users page
+header('location: users.php');
 ?>
