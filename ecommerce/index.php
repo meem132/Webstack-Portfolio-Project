@@ -78,6 +78,78 @@
 						$pdo->close();
 
 		       		?> 
+					<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+    }
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    h1 {
+        text-align: center;
+        color: #333;
+    }
+    .laptop-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-gap: 20px;
+    }
+    .laptop {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+    }
+    .laptop img {
+        width: 100%;
+        height: auto;
+    }
+    .laptop-info {
+        padding: 15px;
+    }
+    .laptop-title {
+        font-size: 18px;
+        font-weight: bold;
+        color: #333;
+        margin: 0 0 10px;
+    }
+    .laptop-price {
+        font-size: 16px;
+        color: #666;
+        margin: 0;
+    }
+    @media (max-width: 767px) {
+        .container {
+            padding: 10px;
+        }
+    }
+</style>
+					<div class="container">
+    <h1>Best-selling Laptops</h1>
+    <div class="laptop-list">
+        <div class="laptop" style="background-color: #fff; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); overflow: hidden;">
+            <img src="images/laptop2.jpg" alt="Laptop 1" style="width: 100%; height: auto;">
+            <div class="laptop-info" style="padding: 15px;">
+                <h2 class="laptop-title" style="font-size: 18px; font-weight: bold; color: #333; margin: 0 0 10px;">HP Envy</h2>
+                <p class="laptop-price" style="font-size: 16px; color: #666; margin: 0;">$999.99</p>
+            </div>
+        </div>
+        <div class="laptop" style="background-color: #fff; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); overflow: hidden;">
+            <img src="images/laptop3.jpg" alt="Laptop 2" style="width: 100%; height: auto;">
+            <div class="laptop-info" style="padding: 15px;">
+                <h2 class="laptop-title" style="font-size: 18px; font-weight: bold; color: #333; margin: 0 0 10px;">Hp Spectre</h2>
+                <p class="laptop-price" style="font-size: 16px; color: #666; margin: 0;">$899.99</p>
+            </div>
+        </div>
+        <!-- Add more laptops as needed -->
+    </div>
+</div>
+					<!---->
 	        	</div>
 	        	<div class="col-sm-3">
 	        		<?php include 'includes/sidebar.php'; ?>
