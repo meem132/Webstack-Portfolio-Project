@@ -1,4 +1,4 @@
-<?php include 'includes/session.php'; ?>
+<?php include 'includes/session.php';?>
 <?php
 	if(!isset($_SESSION['user'])){
 		header('location: index.php');
