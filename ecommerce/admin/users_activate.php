@@ -1,26 +1,31 @@
 <?php
-	include 'includes/session.php';
+include 'includes/session.php';
 
-	if(isset($_POST['activate'])){
-		$id = $_POST['id'];
-		
-		$conn = $pdo->open();
+// Check if the 'activate' button has been submitted
+if(isset($_POST['activate'])){
+    // Retrieve the user ID from the POST data
+    $id = $_POST['id'];
 
-		try{
-			$stmt = $conn->prepare("UPDATE users SET status=:status WHERE id=:id");
-			$stmt->execute(['status'=>1, 'id'=>$id]);
-			$_SESSION['success'] = 'User activated successfully';
-		}
-		catch(PDOException $e){
-			$_SESSION['error'] = $e->getMessage();
-		}
+    // Establish database connection
+    $conn = $pdo->open();
 
-		$pdo->close();
+    try{
+        // Prepare and execute SQL query to update user status to active
+        $stmt = $conn->prepare("UPDATE users SET status=:status WHERE id=:id");
+        $stmt->execute(['status'=>1, 'id'=>$id]);
+        $_SESSION['success'] = 'User activated successfully';
+    }
+    catch(PDOException $e){
+        $_SESSION['error'] = $e->getMessage();
+    }
 
-	}
-	else{
-		$_SESSION['error'] = 'Select user to activate first';
-	}
+    // Close database connection
+    $pdo->close();
+}
+else{
+    $_SESSION['error'] = 'Select user to activate first';
+}
 
-	header('location: users.php');
+// Redirect back to the users page
+header('location: users.php');
 ?>
