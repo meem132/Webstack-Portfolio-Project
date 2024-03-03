@@ -139,7 +139,7 @@ $(function(){
 		$.ajax({
 			type: 'POST',
 			url: 'transaction.php',
-			data: {id:id},
+			data: {id: id},
 			dataType: 'json',
 			success:function(response){
 				$('#date').html(response.date);
