@@ -31,8 +31,7 @@
 - Manage orders, update product inventory, and perform other administrative tasks from the admin panel.
 
 ## Contributors
-- Evance Odhiambo
-- Humphrey Abwao
+- Mohsen Mohamed
 
 ## License
 - This project is licensed under the MIT License - see the LICENSE file for details.
