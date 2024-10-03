@@ -16,7 +16,7 @@
 - Database: MySQL
 
 ## Installation
-- Clone the repository: https://github.com/EvansOdhams/Webstack---Portfolio-Project
+- Clone the repository: https://github.com/meem132/Webstack-Portfolio-Project
 - Import the database schema from ecomm.sql to your MySQL server.
 - Configure the database connection in config.php.
 - Upload the files to your web server.
