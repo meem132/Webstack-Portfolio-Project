@@ -11,9 +11,9 @@
 - Responsive Design: The platform is optimized for various screen sizes and devices.
 
 ## Technologies Used
-- Frontend: HTML, CSS, JavaScript
-- Backend: PHP
-- Database: MySQL
+- Frontend: HTML, CSS, JavaScript.
+- Backend: PHP.
+- Database: MySQL.
 
 ## Installation
 - Clone the repository: https://github.com/meem132/Webstack-Portfolio-Project
