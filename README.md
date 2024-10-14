@@ -37,5 +37,5 @@
 - This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## Acknowledgements
-- We would like to thank all the contributors and developers of the technologies and libraries used in this project. Special thanks to Humphrey Abwao for his collaboration and support throughout the development process.
-we also appreciate alx for an amazing opportunity to showcase and defend our programme in their platform
+-- I would like to thank all the contributors and developers of the technologies and libraries used in this project. Special thanks to ALX students for their collaboration and support throughout the development process.
+
