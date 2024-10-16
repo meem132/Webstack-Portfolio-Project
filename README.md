@@ -11,9 +11,9 @@
 - Responsive Design: The platform is optimized for various screen sizes and devices.
 
 ## Technologies Used
-- Frontend: HTML, CSS, JavaScript
-- Backend: PHP
-- Database: MySQL
+- Frontend: HTML, CSS, JavaScript.
+- Backend: PHP.
+- Database: MySQL.
 
 ## Installation
 - Clone the repository: https://github.com/meem132/Webstack-Portfolio-Project
@@ -37,5 +37,5 @@
 - This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## Acknowledgements
--- I would like to thank all the contributors and developers of the technologies and libraries used in this project. Special thanks to ALX students for their collaboration and support throughout the development process.
+- I would like to thank all the contributors and developers of the technologies and libraries used in this project. Special thanks to ALX students for their collaboration and support throughout the development process.
 
