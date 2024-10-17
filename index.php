@@ -42,7 +42,28 @@
 		            </div>
 		            <h2>Monthly Top Sellers</h2>
 		       		<?php
-		       			$month = date('m');
+// Database connection
+$host = getenv('MYSQL_HOST');
+$port = getenv('MYSQL_PORT');
+$db = getenv('MYSQL_DATABASE');
+$user = getenv('MYSQL_USERNAME');
+$pass = getenv('MYSQL_PASSWORD');
+
+// Set DSN for PDO
+$dsn = "mysql:host=$host;port=$port;dbname=$db;charset=utf8";
+
+// Attempt to create PDO connection
+try {
+    $pdo = new PDO($dsn, $user, $pass);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    echo "Connected successfully!";
+} catch (PDOException $e) {
+    // Output error if connection fails
+    echo "Connection failed: " . $e->getMessage();
+}
+
+
+					$month = date('m');
 		       			$conn = $pdo->open();
 
 		       			try{
