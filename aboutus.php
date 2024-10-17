@@ -32,15 +32,15 @@
 		                </a>
 		            </div>
 		            <h2><b>About Us</b></h2>
-					<h4><b>Welcome to Evansite - Where Your Shopping Experience Begins!</b></h4>
+					<h4><b>Welcome to Alx E-Commerce Site - Where Your Shopping Experience Begins!</b></h4>
 					
-					<p>At Evansite, we're passionate about revolutionizing the way you shop online. Founded by Evans himself, our platform is more than just an ecommerce website – it's a destination where convenience, quality, and innovation converge.</p>
+					<p>At Alx E-Commerce Site, we're passionate about revolutionizing the way you shop online. Founded by Evans himself, our platform is more than just an ecommerce website – it's a destination where convenience, quality, and innovation converge.</p>
 					<br>
 					<h4>Our Story</h4>
-					<p>Evansite was born out of a simple yet powerful idea: to create an online shopping experience that exceeds expectations. Frustrated by the limitations of existing platforms, Evans embarked on a journey to build a solution that puts customers first. With a vision to blend cutting-edge technology with exceptional customer service, Evansite came to life.</p>
+					<p>Alx E-Commerce Site was born out of a simple yet powerful idea: to create an online shopping experience that exceeds expectations. Frustrated by the limitations of existing platforms, Evans embarked on a journey to build a solution that puts customers first. With a vision to blend cutting-edge technology with exceptional customer service, Alx E-Commerce Site came to life.</p>
 					<br>
 					<h4>Our Mission</h4>
-					<p>At Evansite, our mission is clear: to empower customers to discover, shop, and connect with ease. We're committed to offering a diverse range of products curated to meet your every need. Whether you're searching for the latest fashion trends, high-tech gadgets, or everyday essentials, Evansite is your one-stop destination.</p>
+					<p>At Alx E-Commerce Site, our mission is clear: to empower customers to discover, shop, and connect with ease. We're committed to offering a diverse range of products curated to meet your every need. Whether you're searching for the latest fashion trends, high-tech gadgets, or everyday essentials, Alx E-Commerce Site is your one-stop destination.</p>
 	        	</div>
 	        	<div class="col-sm-3">
 	        		<?php include 'includes/sidebar.php'; ?>
